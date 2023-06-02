@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle A101</title>
+    <style>
+      body {
+        font-family: "Poppins Semibold", sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #1d4d95;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .header-section {
+        background-color: #ffffff;
+        padding: 20px;
+      }
+
+      .Alvis {
+        color: #ff5e00;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+
+      .A101 {
+        color: #ffffff;
+        margin: 200px auto; /* Ajout de la marge pour centrer le texte */
+      }
+
+      .nav {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #000000;
+        transition: all 0.3s ease;
+      }
+
+      .nav a.bold {
+        font-weight: bold;
+      }
+
+      .nav a:hover {
+        color: #ff5e00;
+        transform: scale(1.1);
+      }
+
+      main {
+        color: white;
+        text-align: center;
+        align-items: center;
+      }
+
+      main h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      .tout {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-top: -400px;
+      }
+
+      .image-container {
+        text-align: left;
+        margin-top: 10px;
+      }
+
+      .image-container img {
+        width: 600px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .profs-entier {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+      }
+
+      .profs-contenu {
+        background-color: #009ee2;
+        border-radius: 15px;
+        width: 200px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+        margin-right: 400px;
+        margin-top: 600px;
+        margin-bottom: 200px;
+      }
+
+      .imga101 {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin-left: 400px;
+      }
+
+      /* Étoiles de notation */
+      .rating {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .rating input {
+        display: none;
+      }
+
+      .rating label {
+        display: inline-block;
+        color: #ccc;
+        cursor: pointer;
+      }
+
+      .rating label:before {
+        content: "\2605";
+        font-size: 30px;
+      }
+
+      .rating input:checked ~ label,
+      .rating label:hover,
+      .rating input:hover ~ label {
+        color: #ff5e00;
+      }
+
+      .review-input {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .review-input input[type="text"] {
+        width: 200px;
+        height: 40px;
+        background-color: #ff5e00;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+      }
+
+      .review-input input[type="text"]::placeholder {
+        color: white;
+      }
+
+      /* Dropdown */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Pied de page */
+      .footer {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .footer h4 {
+        color: #ff5e00;
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      .footer p {
+        color: #009ee2;
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .footer .email-list p {
+        margin: 0;
+      }
+
+      .footer .copyright {
+        color: #009ee2;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-section">
+      <h1>Alvis</h1>
+      <div class="nav">
+        <a href="1.Accueil.html" class="bold">Accueil</a>
+        <div class="dropdown">
+          <a href="#" class="bold">Notations</a>
+          <div class="dropdown-content">
+            <a href="3.N-Enseignants.html">Enseignants</a>
+            <a href="4.N-Matieres.html">Matières</a>
+            <a href="5.N-Classes.html">Classes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="bold">Classement</a>
+          <div class="dropdown-content">
+            <a href="7.C-Enseignants.html">Enseignants</a>
+            <a href="8.C-Matieres.html">Matières</a>
+            <a href="9.C-Classes.html">Classes</a>
+          </div>
+        </div>
+        <a href="10.Sondage.html" class="bold">Sondage</a>
+        <a href="12.Contact.html" class="bold">Contact</a>
+      </div>
+    </div>
+
+    <main>
+      <h1 class="A101">Salle de Permanence</h1>
+      <div class="tout">
+        <div class="image-container">
+          <img class="imga101" src="PERMANENCE.jpg" alt="img" />
+        </div>
+        <div class="profs-entier">
+          <div class="profs-contenu">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5"></label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4"></label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3"></label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2"></label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder="Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer">
+      <h4>ALVIS</h4>
+      <div class="email-list">
+        <p>eleve.chafai.anas@ecolealjabr.com</p>
+        <p>eleve.naciri.mohamed@ecolealjabr.com</p>
+        <p>eleve.ahriz.nada@ecolealjabr.com</p>
+        <p>eleve.radi.taha@ecolealjabr.com</p>
+      </div>
+      <p>© 2023 par Alvis</p>
+    </div>
+  </body>
+</html>

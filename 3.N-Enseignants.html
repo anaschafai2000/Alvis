@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Alvis - Enseignants</title>
+    <style>
+      body {
+        font-family: "Poppins Semibold", sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #1d4d95;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .header-section {
+        background-color: #ffffff;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #ff5e00;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+
+      /* Dropdown */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .nav {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #000000;
+        transition: all 0.3s ease;
+      }
+
+      .nav a.bold {
+        font-weight: bold;
+      }
+
+      .nav a:hover {
+        color: #ff5e00;
+        transform: scale(1.1);
+      }
+
+      /* Pied de page */
+      .footer {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .footer h4 {
+        color: #ff5e00;
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      .footer p {
+        color: #009ee2;
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .footer .email-list p {
+        margin: 0;
+      }
+
+      .footer .copyright {
+        color: #009ee2;
+        font-size: 14px;
+      }
+
+      main {
+        color: white;
+        text-align: center;
+      }
+
+      main h1 {
+        color: white;
+        text-align: center;
+        margin: 40px auto;
+      }
+
+      main h3 {
+        text-align: center;
+      }
+
+      main p {
+        margin-left: 300px;
+        margin-right: 300px;
+        margin-top: 10px;
+        margin-bottom: 100px;
+      }
+
+      .profs-entier {
+        display: flex;
+        overflow-x: auto;
+      }
+
+      .profs-contenu {
+        background-color: #009ee2;
+        margin-top: 0px;
+        border-radius: 15px;
+        width: 300px;
+        height: 500px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+        margin-bottom: 100px;
+      }
+
+      .tof img {
+        border-radius: 50%;
+        align-items: center;
+        text-align: center;
+        margin-top: 0px;
+        width: 200px;
+        height: 200px;
+      }
+
+      /* Étoiles de notation */
+      .rating {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .rating input {
+        display: none;
+      }
+
+      .rating label {
+        display: inline-block;
+        color: #ccc;
+        cursor: pointer;
+      }
+
+      .rating label:before {
+        content: "\2605";
+        font-size: 30px;
+      }
+
+      .rating input:checked ~ label,
+      .rating label:hover,
+      .rating input:hover ~ label {
+        color: #ff5e00;
+      }
+
+      .review-input {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .review-input input[type="text"] {
+        width: 200px;
+        height: 40px;
+        background-color: #ff5e00;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+      }
+
+      .review-input input[type="text"]::placeholder {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-section">
+      <h1>Alvis</h1>
+      <div class="nav">
+        <a href="1.Accueil.html" class="bold">Accueil</a>
+        <div class="dropdown">
+          <a href="#" class="bold">Notations</a>
+          <div class="dropdown-content">
+            <a href="3.N-Enseignants.html">Enseignants</a>
+            <a href="4.N-Matieres.html">Matières</a>
+            <a href="5.N-Classes.html">Classes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="bold">Classement</a>
+          <div class="dropdown-content">
+            <a href="7.C-Enseignants.html">Enseignants</a>
+            <a href="8.C-Matieres.html">Matières</a>
+            <a href="9.C-Classes.html">Classes</a>
+          </div>
+        </div>
+        <a href="10.Sondage.html" class="bold">Sondage</a>
+        <a href="12.Contact.html" class="bold">Contact</a>
+      </div>
+    </div>
+
+    <main>
+      <h1>Enseignants</h1>
+      <h3>Notez, commentez, classez</h3>
+      <p>
+        Bienvenue dans la rubrique "Enseignants" ! Cette section vous permet de
+        partager votre expérience et d'évaluer les enseignants qui ont eu un
+        impact sur votre parcours scolaire. Vos évaluations aideront les futurs
+        élèves à choisir leurs cours et soutiendront nos enseignants dans leur
+        développement professionnel.
+      </p>
+      <div class="profs-entier">
+        <!-- Section à gauche -->
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Mr Lotfi.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de Maths</h4>
+            <h2>Mr Lotfi</h2>
+            <h5>elotfi@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5"></label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4"></label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3"></label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2"></label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Section originale -->
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Mr Lemsarrad.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de SNT</h4>
+            <h2>Mr Lemsarrad</h2>
+            <h5>mlemsarrad@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-1" name="rating-1" value="5" />
+              <label for="star5-1"></label>
+              <input type="radio" id="star4-1" name="rating-1" value="4" />
+              <label for="star4-1"></label>
+              <input type="radio" id="star3-1" name="rating-1" value="3" />
+              <label for="star3-1"></label>
+              <input type="radio" id="star2-1" name="rating-1" value="2" />
+              <label for="star2-1"></label>
+              <input type="radio" id="star1-1" name="rating-1" value="1" />
+              <label for="star1-1"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Section à droite -->
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de NSI</h4>
+            <h2>Mr Abid</h2>
+            <h5>yabid@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-2" name="rating-2" value="5" />
+              <label for="star5-2"></label>
+              <input type="radio" id="star4-2" name="rating-2" value="4" />
+              <label for="star4-2"></label>
+              <input type="radio" id="star3-2" name="rating-2" value="3" />
+              <label for="star3-2"></label>
+              <input type="radio" id="star2-2" name="rating-2" value="2" />
+              <label for="star2-2"></label>
+              <input type="radio" id="star2-2" name="rating-2" value="1" />
+              <label for="star1-2"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Mr Zouhair.png" />
+          </div>
+          <div class="text">
+            <h4>Surveillant pédagogique</h4>
+            <h2>Mr Zouhair</h2>
+            <h5>zsmili@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-3" name="rating-3" value="5" />
+              <label for="star5-3"></label>
+              <input type="radio" id="star4-3" name="rating-3" value="4" />
+              <label for="star4-3"></label>
+              <input type="radio" id="star3-3" name="rating-3" value="3" />
+              <label for="star3-3"></label>
+              <input type="radio" id="star2-3" name="rating-3" value="2" />
+              <label for="star2-3"></label>
+              <input type="radio" id="star3-3" name="rating-3" value="1" />
+              <label for="star3-3"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de Français</h4>
+            <h2>Mr Patrigeon</h2>
+            <h5>mpatrigeon@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-4" name="rating-4" value="5" />
+              <label for="star5-4"></label>
+              <input type="radio" id="star4-4" name="rating-4" value="4" />
+              <label for="star4-4"></label>
+              <input type="radio" id="star3-4" name="rating-4" value="3" />
+              <label for="star3-4"></label>
+              <input type="radio" id="star2-4" name="rating-4" value="2" />
+              <label for="star2-4"></label>
+              <input type="radio" id="star4-4" name="rating-4" value="1" />
+              <label for="star4-4"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Mmr Amor.png" />
+          </div>
+          <div class="text">
+            <h4>Professeure d'Histoire</h4>
+            <h2>Mme Amor</h2>
+            <h5>hamor@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-5" name="rating-5" value="5" />
+              <label for="star5-5"></label>
+              <input type="radio" id="star4-5" name="rating-5" value="4" />
+              <label for="star4-5"></label>
+              <input type="radio" id="star3-5" name="rating-5" value="3" />
+              <label for="star3-5"></label>
+              <input type="radio" id="star2-5" name="rating-5" value="2" />
+              <label for="star2-5"></label>
+              <input type="radio" id="star5-5" name="rating-5" value="1" />
+              <label for="star5-5"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur d'Espagnol</h4>
+            <h2>Mme Patrigeon</h2>
+            <h5>cpatrigeon@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-6" name="rating-6" value="5" />
+              <label for="star5-6"></label>
+              <input type="radio" id="star4-6" name="rating-6" value="4" />
+              <label for="star4-6"></label>
+              <input type="radio" id="star3-6" name="rating-6" value="3" />
+              <label for="star3-6"></label>
+              <input type="radio" id="star2-6" name="rating-6" value="2" />
+              <label for="star2-6"></label>
+              <input type="radio" id="star6-6" name="rating-6" value="1" />
+              <label for="star6-6"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Mr Marouane.png" />
+          </div>
+          <div class="text">
+            <h4>Surveillant pédagogique</h4>
+            <h2>Mr Marouane</h2>
+            <h5>m.ghillane@ecoleyassamine.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-7" name="rating-7" value="5" />
+              <label for="star5-7"></label>
+              <input type="radio" id="star4-7" name="rating-7" value="4" />
+              <label for="star4-7"></label>
+              <input type="radio" id="star3-7" name="rating-7" value="3" />
+              <label for="star3-7"></label>
+              <input type="radio" id="star2-7" name="rating-7" value="2" />
+              <label for="star2-7"></label>
+              <input type="radio" id="star7-7" name="rating-7" value="1" />
+              <label for="star7-7"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de Physique</h4>
+            <h2>Mr Grégoire</h2>
+            <h5>ggregoire@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-8" name="rating-8" value="5" />
+              <label for="star5-8"></label>
+              <input type="radio" id="star4-8" name="rating-8" value="4" />
+              <label for="star4-8"></label>
+              <input type="radio" id="star3-8" name="rating-8" value="3" />
+              <label for="star3-8"></label>
+              <input type="radio" id="star2-8" name="rating-8" value="2" />
+              <label for="star2-8"></label>
+              <input type="radio" id="star8-8" name="rating-8" value="1" />
+              <label for="star8-8"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeure d'Anglais</h4>
+            <h2>Mme Larrive</h2>
+            <h5>nlarrive@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-9" name="rating-9" value="5" />
+              <label for="star5-9"></label>
+              <input type="radio" id="star4-9" name="rating-9" value="4" />
+              <label for="star4-9"></label>
+              <input type="radio" id="star3-9" name="rating-9" value="3" />
+              <label for="star3-9"></label>
+              <input type="radio" id="star2-9" name="rating-9" value="2" />
+              <label for="star2-9"></label>
+              <input type="radio" id="star9-9" name="rating-9" value="1" />
+              <label for="star9-9"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de EPS</h4>
+            <h2>Mr Marzouki</h2>
+            <h5>ymarzouki@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-10" name="rating-10" value="5" />
+              <label for="star5-10"></label>
+              <input type="radio" id="star4-10" name="rating-10" value="4" />
+              <label for="star4-10"></label>
+              <input type="radio" id="star3-10" name="rating-10" value="3" />
+              <label for="star3-10"></label>
+              <input type="radio" id="star2-10" name="rating-10" value="2" />
+              <label for="star2-10"></label>
+              <input type="radio" id="star10-10" name="rating-10" value="1" />
+              <label for="star10-10"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Mme Benyahya.png" />
+          </div>
+          <div class="text">
+            <h4>Conseillère d'Orientation</h4>
+            <h2>Mme Benyahia</h2>
+            <h5>a.benyahia@ecoleyassamine.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-11" name="rating-11" value="5" />
+              <label for="star5-11"></label>
+              <input type="radio" id="star4-11" name="rating-11" value="4" />
+              <label for="star4-11"></label>
+              <input type="radio" id="star3-11" name="rating-11" value="3" />
+              <label for="star3-11"></label>
+              <input type="radio" id="star2-11" name="rating-11" value="2" />
+              <label for="star2-11"></label>
+              <input type="radio" id="star11-11" name="rating-11" value="1" />
+              <label for="star11-11"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur d'Arabe</h4>
+            <h2>Mr Dhissi</h2>
+            <h5>mdhissi@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-12" name="rating-12" value="5" />
+              <label for="star5-12"></label>
+              <input type="radio" id="star4-12" name="rating-12" value="4" />
+              <label for="star4-12"></label>
+              <input type="radio" id="star3-12" name="rating-12" value="3" />
+              <label for="star3-12"></label>
+              <input type="radio" id="star2-12" name="rating-12" value="2" />
+              <label for="star2-12"></label>
+              <input type="radio" id="star12-12" name="rating-12" value="1" />
+              <label for="star12-12"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur d'Histoire</h4>
+            <h2>Mr Fournier</h2>
+            <h5>mmathieu@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-13" name="rating-13" value="5" />
+              <label for="star5-13"></label>
+              <input type="radio" id="star4-13" name="rating-13" value="4" />
+              <label for="star4-13"></label>
+              <input type="radio" id="star3-13" name="rating-13" value="3" />
+              <label for="star3-13"></label>
+              <input type="radio" id="star2-13" name="rating-13" value="2" />
+              <label for="star2-13"></label>
+              <input type="radio" id="star13-13" name="rating-13" value="1" />
+              <label for="star13-13"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeure de SVT</h4>
+            <h2>Mme Dahdah</h2>
+            <h5>sdahdah@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-14" name="rating-14" value="5" />
+              <label for="star5-14"></label>
+              <input type="radio" id="star4-14" name="rating-14" value="4" />
+              <label for="star4-14"></label>
+              <input type="radio" id="star3-14" name="rating-14" value="3" />
+              <label for="star3-14"></label>
+              <input type="radio" id="star2-14" name="rating-14" value="2" />
+              <label for="star2-14"></label>
+              <input type="radio" id="star14-14" name="rating-14" value="1" />
+              <label for="star14-14"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeure de Physique Chimie</h4>
+            <h2>Mme Khazana</h2>
+            <h5>skhazana@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-15" name="rating-15" value="5" />
+              <label for="star5-15"></label>
+              <input type="radio" id="star4-15" name="rating-15" value="4" />
+              <label for="star4-15"></label>
+              <input type="radio" id="star3-15" name="rating-15" value="3" />
+              <label for="star3-15"></label>
+              <input type="radio" id="star2-15" name="rating-15" value="2" />
+              <label for="star2-15"></label>
+              <input type="radio" id="star15-15" name="rating-15" value="1" />
+              <label for="star15-15"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Mr Najibi.png" />
+          </div>
+          <div class="text">
+            <h4>Surveillante pédagogique</h4>
+            <h2>Mme Najiba</h2>
+            <h5>nbouftila@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-16" name="rating-16" value="5" />
+              <label for="star5-16"></label>
+              <input type="radio" id="star4-16" name="rating-16" value="4" />
+              <label for="star4-16"></label>
+              <input type="radio" id="star3-16" name="rating-16" value="3" />
+              <label for="star3-16"></label>
+              <input type="radio" id="star2-16" name="rating-16" value="2" />
+              <label for="star2-16"></label>
+              <input type="radio" id="star16-16" name="rating-16" value="1" />
+              <label for="star16-16"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur d'Arabe</h4>
+            <h2>Mr Aitbella</h2>
+            <h5>haitbella@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-17" name="rating-17" value="5" />
+              <label for="star5-17"></label>
+              <input type="radio" id="star4-17" name="rating-17" value="4" />
+              <label for="star4-17"></label>
+              <input type="radio" id="star3-17" name="rating-17" value="3" />
+              <label for="star3-17"></label>
+              <input type="radio" id="star2-17" name="rating-17" value="2" />
+              <label for="star2-17"></label>
+              <input type="radio" id="star17-17" name="rating-17" value="1" />
+              <label for="star17-17"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de Français</h4>
+            <h2>Mr Rabier</h2>
+            <h5>mrabier@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-18" name="rating-18" value="5" />
+              <label for="star5-18"></label>
+              <input type="radio" id="star4-18" name="rating-18" value="4" />
+              <label for="star4-18"></label>
+              <input type="radio" id="star3-18" name="rating-18" value="3" />
+              <label for="star3-18"></label>
+              <input type="radio" id="star2-18" name="rating-18" value="2" />
+              <label for="star2-18"></label>
+              <input type="radio" id="star18-18" name="rating-18" value="1" />
+              <label for="star18-18"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+
+        <div class="profs-contenu">
+          <div class="tof">
+            <img src="Files\Unknown.png" />
+          </div>
+          <div class="text">
+            <h4>Professeur de EPS</h4>
+            <h2>Mr Samir</h2>
+            <h5>tsamir@ecolealjabr.com</h5>
+            <div class="rating">
+              <input type="radio" id="star5-19" name="rating-19" value="5" />
+              <label for="star5-19"></label>
+              <input type="radio" id="star4-19" name="rating-19" value="4" />
+              <label for="star4-19"></label>
+              <input type="radio" id="star3-19" name="rating-19" value="3" />
+              <label for="star3-19"></label>
+              <input type="radio" id="star2-19" name="rating-19" value="2" />
+              <label for="star2-19"></label>
+              <input type="radio" id="star19-19" name="rating-19" value="1" />
+              <label for="star19-19"></label>
+            </div>
+            <div class="review-input">
+              <input type="text" placeholder=" Rédiger un avis !" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Pied de page -->
+    <div class="footer">
+      <h4>ALVIS</h4>
+      <div class="email-list">
+        <p>eleve.chafai.anas@ecolealjabr.com</p>
+        <p>eleve.naciri.mohamed@ecolealjabr.com</p>
+        <p>eleve.ahriz.nada@ecolealjabr.com</p>
+        <p>eleve.radi.taha@ecolealjabr.com</p>
+      </div>
+      <p>© 2023 par Alvis</p>
+    </div>
+  </body>
+</html>

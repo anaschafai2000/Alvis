@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvis - Accueil</title>
+    <style>
+      body {
+        font-family: "Poppins Semibold", sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #1d4d95;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .header-section {
+        background-color: #ffffff;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #ff5e00;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+
+      .nav {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #000000;
+        transition: all 0.3s ease;
+      }
+
+      .nav a.bold {
+        font-weight: bold;
+      }
+
+      .nav a:hover {
+        color: #ff5e00;
+        transform: scale(1.1);
+      }
+
+      /* Dropdown */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Pied de page */
+      .footer {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .footer h4 {
+        color: #ff5e00;
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      .footer p {
+        color: #009ee2;
+        margin-bottom: 5px;
+        font-size: 14px; /* Réduire la taille de la police */
+        line-height: 1.5;
+      }
+
+      .footer .email-list p {
+        margin: 0; /* Supprimé le margin-bottom pour les emails */
+      }
+
+      .footer .copyright {
+        color: #009ee2;
+        font-size: 14px;
+      }
+
+      main {
+        text-align: center;
+      }
+
+      main h2 {
+        text-align: center;
+        color: white;
+        font-size: 60px;
+        font-weight: 100;
+        margin-top: 150px;
+        margin-bottom: 100px;
+      }
+      .case {
+        background-color: #ff5e00;
+        margin-left: 300px;
+        margin-right: 300px;
+        width: 1000px;
+        height: 100px;
+        border-radius: 30px;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+      }
+      .case p {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        margin-top: 20px;
+      }
+
+      .classement1 {
+        align-items: center;
+        margin-top: 100px;
+      }
+
+      .classement2 {
+        align-items: center;
+        margin-top: 50px;
+      } 
+
+      .classement3 {
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 200px;
+      } 
+
+      .classement-prof {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: 200px;
+      }
+      .classement-chiffre {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        background-color: #ff5e00;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+      }
+      .classement-chiffre p {
+        margin-top: 15px;
+        font-size: 150px;
+        color: white;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      .classement-carre {
+        margin-left: 30px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+        background-color: #009ee2;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+      }
+      .classement-carre img {
+        width: 150px;
+        border-radius: 10px;
+        margin-top: 42px;
+      }
+      .classement-rectangle {
+        margin-left: 30px;
+        width: 700px;
+        height: 200px;
+        border-radius: 50px;
+        background-color: #009ee2;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+      }
+      .classement-rectangle h5 {
+        color: white;
+        font-size: 17px;
+      }
+      .classement-rectangle h3 {
+        margin-top: 5px;
+        color: white;
+        font-size: 40px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-section">
+      <h1>Alvis</h1>
+      <div class="nav">
+        <a href="1.Accueil.html" class="bold">Accueil</a>
+        <div class="dropdown">
+          <a href="#" class="bold">Notations</a>
+          <div class="dropdown-content">
+            <a href="3.N-Enseignants.html">Enseignants</a>
+            <a href="4.N-Matieres.html">Matières</a>
+            <a href="5.N-Classes.html">Classes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="bold">Classement</a>
+          <div class="dropdown-content">
+            <a href="7.C-Enseignants.html">Enseignants</a>
+            <a href="8.C-Matieres.html">Matières</a>
+            <a href="9.C-Classes.html">Classes</a>
+          </div>
+        </div>
+        <a href="10.Sondage.html" class="bold">Sondage</a>
+        <a href="12.Contact.html" class="bold">Contact</a>
+      </div>
+    </div>
+
+    <main>
+      <h2>Classement des enseignants</h1>
+      <div class="case">
+        <p>Rang</p>
+      </div>
+      <div class="classement1">
+        <div class="classement-prof">
+          <div class="classement-chiffre">
+            <p>1</p>
+          </div>
+          <div class="classement-carre">
+            <img src="E06.jpg" />
+          </div>
+          <div class="classement-rectangle">
+            <h5>ㅤ</h5>
+            <h3>Salle E06</h3>
+            <h5>ㅤ</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="classement2">
+        <div class="classement-prof">
+          <div class="classement-chiffre">
+            <p>2</p>
+          </div>
+          <div class="classement-carre">
+            <img src="PERMANENCE.jpg" />
+          </div>
+          <div class="classement-rectangle">
+            <h5>ㅤ</h5>
+            <h3>Permanence</h3>
+            <h5>ㅤ</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="classement3">
+        <div class="classement-prof">
+          <div class="classement-chiffre">
+            <p>3</p>
+          </div>
+          <div class="classement-carre">
+            <img src="C101.jpg" />
+          </div>
+          <div class="classement-rectangle">
+            <h5>ㅤ</h5>
+            <h3>Salle C101</h3>
+            <h5>ㅤ</h5>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Pied de page -->
+    <div class="footer">
+      <h4>ALVIS</h4>
+      <div class="email-list">
+        <p>eleve.chafai.anas@ecolealjabr.com</p>
+        <p>eleve.naciri.mohamed@ecolealjabr.com</p>
+        <p>eleve.ahriz.nada@ecolealjabr.com</p>
+        <p>eleve.radi.taha@ecolealjabr.com</p>
+      </div>
+      <p>© 2023 par Alvis</p>
+    </div>
+  </body>
+</html>

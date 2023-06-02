@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvis - Accueil</title>
+    <style>
+      body {
+        font-family: "Poppins Semibold", sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #1d4d95;
+      }
+
+      .header-section {
+        background-color: #ffffff;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #ff5e00;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+
+      .nav {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #000000;
+        transition: all 0.3s ease;
+      }
+
+      .nav a.bold {
+        font-weight: bold;
+      }
+
+      .nav a:hover {
+        color: #ff5e00;
+        transform: scale(1.1);
+      }
+
+      /* Dropdown */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .second-part {
+        background-color: #1d4d95;
+        color: #ffffff;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Ajouté pour aligner l'image avec le texte */
+        margin-bottom: 0px; /* Réduit la longueur entre la section de bienvenue et la section des services */
+      }
+
+      .second-part h2 {
+        font-size: 36px; /* Augmented font-size value */
+        margin-bottom: 20px;
+      }
+
+      .second-part p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .half-width {
+        width: 45%;
+      }
+
+      h2 {
+        color: #009ee2;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      .services {
+        background-color: #1d4d95;
+        color: #ffffff;
+        padding: 50px;
+        margin: 0 auto; /* Centrer la section des services horizontalement */
+        text-align: center;
+      }
+
+      .services h2 {
+        font-size: 36px; /* Augmented font-size value */
+        margin-bottom: 30px;
+      }
+
+      .categories {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+
+      .category {
+        flex: 1;
+        margin-right: 20px;
+        background-color: #009ee2;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .category h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      .category p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #ffffff;
+      }
+
+      .category .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .category .image-container img {
+        max-width: 40%;
+        max-height: 40%;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      .third-part {
+        background-color: #1d4d95;
+        color: #ffffff;
+        padding: 50px;
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .third-part h2 {
+        font-size: 36px; /* Augmented font-size value */
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+
+      .buttons-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .buttons-container a {
+        display: inline-block;
+        background-color: #ff5e00;
+        color: #ffffff;
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+
+      .buttons-container a:hover {
+        background-color: #ff7e33;
+        transform: scale(1.1);
+      }
+
+      /* Pied de page */
+      .footer {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footer h4 {
+        color: #ff5e00;
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      .footer p {
+        color: #009ee2;
+        margin-bottom: 5px;
+        font-size: 14px; /* Réduire la taille de la police */
+        line-height: 1.5;
+      }
+
+      .footer .email-list p {
+        margin: 0; /* Supprimé le margin-bottom pour les emails */
+      }
+
+      .footer .copyright {
+        color: #009ee2;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-section">
+      <h1>Alvis</h1>
+      <div class="nav">
+        <a href="1.Accueil.html" class="bold">Accueil</a>
+        <div class="dropdown">
+          <a href="#" class="bold">Notations</a>
+          <div class="dropdown-content">
+            <a href="3.N-Enseignants.html">Enseignants</a>
+            <a href="4.N-Matieres.html">Matières</a>
+            <a href="5.N-Classes.html">Classes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="bold">Classement</a>
+          <div class="dropdown-content">
+            <a href="7.C-Enseignants.html">Enseignants</a>
+            <a href="8.C-Matieres.html">Matières</a>
+            <a href="9.C-Classes.html">Classes</a>
+          </div>
+        </div>
+        <a href="10.Sondage.html" class="bold">Sondage</a>
+        <a href="12.Contact.html" class="bold">Contact</a>
+      </div>
+    </div>
+    <div class="second-part">
+      <div class="half-width">
+        <h2>Bienvenue sur Alvis</h2>
+        <p>
+          Bienvenue sur le site Alvis dédié à notre école Al Jabr ! Nous sommes
+          ravis de vous accueillir dans cet espace interactif où vous pouvez
+          noter, évaluer et donner votre avis sur différents aspects de notre
+          école. Votre voix compte et vos contributions aideront à façonner
+          notre communauté éducative. Sur Alvis, vous trouverez une plateforme
+          conviviale qui vous permet de noter nos enseignants, nos cours, nos
+          infrastructures, nos activités parascolaires et bien plus encore.
+          Votre expérience et vos opinions sont précieuses pour nous aider à
+          améliorer continuellement la qualité de notre établissement.
+        </p>
+      </div>
+      <div class="half-width">
+        <div class="image-container">
+          <img src="Files/Al Jabr OASIS.png" alt="Al Jabr Oasis" />
+        </div>
+      </div>
+    </div>
+    <div class="services">
+      <h2>Services</h2>
+      <div class="categories">
+        <div class="category">
+          <div class="image-container">
+            <img src="Files/Enseignants.png" alt="Enseignants" />
+          </div>
+          <h3>Enseignants</h3>
+          <p>
+            Partagez votre opinion sur leurs compétences pédagogiques, leur
+            communication, leur disponibilité et leur capacité à motiver les
+            élèves.
+          </p>
+        </div>
+        <div class="category">
+          <div class="image-container">
+            <img src="Files/Matières.png" alt="Matières" />
+          </div>
+          <h3>Matières</h3>
+          <p>
+            Exprimez votre ressenti quant à la pertinence des contenus, la
+            clarté des explications, l'intérêt des activités proposées...
+          </p>
+        </div>
+        <div class="category">
+          <div class="image-container">
+            <img src="Files/Classes.png" alt="Salles" />
+          </div>
+          <h3>Salles</h3>
+          <p>
+            Évaluez les salles de classe, les laboratoires, les bibliothèques et
+            autres installations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="third-part">
+      <h2>COMMENCEZ DÈS MAINTENANT</h2>
+      <div class="buttons-container">
+        <a href="3.N-Enseignants.html" class="button">Enseignants</a>
+        <a href="4.N-Matieres.html" class="button">Matières</a>
+        <a href="5.N-Classes.html" class="button">Classes</a>
+      </div>
+    </div>
+    <!-- Pied de page -->
+    <div class="footer">
+      <h4>ALVIS</h4>
+      <div class="email-list">
+        <p>eleve.chafai.anas@ecolealjabr.com</p>
+        <p>eleve.naciri.mohamed@ecolealjabr.com</p>
+        <p>eleve.ahriz.nada@ecolealjabr.com</p>
+        <p>eleve.radi.taha@ecolealjabr.com</p>
+      </div>
+      <p>© 2023 par Alvis</p>
+    </div>
+  </body>
+</html>

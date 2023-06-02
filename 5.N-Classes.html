@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvis - Accueil</title>
+    <style>
+      body {
+        font-family: "Poppins Semibold", sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #1d4d95;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Dropdown */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .plan-section {
+        background-color: #1d4d95;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+      }
+
+      .plan-image {
+        position: relative;
+      }
+
+      .plan-image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .class-image {
+        position: absolute;
+        width: 70px; /* Largeur agrandie de l'image */
+        height: 70px; /* Hauteur agrandie de l'image */
+      }
+
+      .header-section {
+        background-color: #ffffff;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #ff5e00;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+
+      .nav {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #000000;
+        transition: all 0.3s ease;
+      }
+
+      .nav a.bold {
+        font-weight: bold;
+      }
+
+      .nav a:hover {
+        color: #ff5e00;
+        transform: scale(1.1);
+      }
+
+      /* Pied de page */
+      .footer {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .footer h4 {
+        color: #ff5e00;
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      .footer p {
+        color: #009ee2;
+        margin-bottom: 5px;
+        font-size: 14px; /* Réduire la taille de la police */
+        line-height: 1.5;
+      }
+
+      .footer .email-list p {
+        margin: 0; /* Supprimé le margin-bottom pour les emails */
+      }
+
+      .footer .copyright {
+        color: #009ee2;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-section">
+      <h1>Alvis</h1>
+      <div class="nav">
+        <a href="1.Accueil.html" class="bold">Accueil</a>
+        <div class="dropdown">
+          <a href="#" class="bold">Notations</a>
+          <div class="dropdown-content">
+            <a href="3.N-Enseignants.html">Enseignants</a>
+            <a href="4.N-Matieres.html">Matières</a>
+            <a href="5.N-Classes.html">Classes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="bold">Classement</a>
+          <div class="dropdown-content">
+            <a href="7.C-Enseignants.html">Enseignants</a>
+            <a href="8.C-Matieres.html">Matières</a>
+            <a href="9.C-Classes.html">Classes</a>
+          </div>
+        </div>
+        <a href="10.Sondage.html" class="bold">Sondage</a>
+        <a href="12.Contact.html" class="bold">Contact</a>
+      </div>
+    </div>
+
+    <div class="plan-section">
+      <div class="plan-image">
+        <img src="Files\Plan Al Jabrŕ.PNG" alt="Plan de l'école" />
+
+        <!-- Ajoutez les balises <img> pour les images des noms des classes avec les coordonnées spécifiques -->
+        <a href="E06.html">
+          <img
+            src="Files\I06.png"
+            alt="E06"
+            class="class-image"
+            style="left: 270px; top: 500px"
+        /></a>
+
+        <a href="F02.html">
+          <img
+            src="Files\I02.png"
+            alt="F02"
+            class="class-image"
+            style="left: 400px; top: 500px"
+        /></a>
+
+        <a href="A101.html">
+          <img
+            src="Files\IC A101.png"
+            alt="A101"
+            class="class-image"
+            style="left: 310px; top: 220px"
+        /></a>
+
+        <a href="A102.html">
+          <img
+            src="Files\IC A102.png"
+            alt="A102"
+            class="class-image"
+            style="left: 250px; top: 200px"
+        /></a>
+
+        <a href="B02.html">
+          <img
+            src="Files\IB02.png"
+            alt="B02"
+            class="class-image"
+            style="left: 500px; top: 50px"
+        /></a>
+
+        <a href="B101.HTML">
+          <img
+            src="Files\IC B101.png"
+            alt="B101"
+            class="class-image"
+            style="left: 400px; top: 100px"
+        /></a>
+
+        <a href="B103.html">
+          <img
+            src="Files\IC B103.png"
+            alt="B103"
+            class="class-image"
+            style="left: 330px; top: 80px"
+        /></a>
+
+        <a href="C101.html">
+          <img
+            src="Files\IC C101.png"
+            alt="C101"
+            class="class-image"
+            style="left: 580px; top: 200px"
+        /></a>
+
+        <a href="C104.html">
+          <img
+            src="Files\IC C104.png"
+            alt="C104"
+            class="class-image"
+            style="left: 700px; top: 170px"
+        /></a>
+
+        <a href="D103.html">
+          <img
+            src="Files\IC D103.png"
+            alt="D103"
+            class="class-image"
+            style="left: 620px; top: 540px"
+        /></a>
+
+        <a href="D203.html">
+          <img
+            src="Files\IC D203.png"
+            alt="D203"
+            class="class-image"
+            style="left: 700px; top: 500px"
+        /></a>
+
+        <a href="Permanence.html">
+          <img
+            src="Files\Permanence.png"
+            alt="Permanence"
+            class="class-image"
+            style="left: 700px; top: 250px"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Pied de page -->
+    <div class="footer">
+      <h4>ALVIS</h4>
+      <div class="email-list">
+        <p>eleve.chafai.anas@ecolealjabr.com</p>
+        <p>eleve.naciri.mohamed@ecolealjabr.com</p>
+        <p>eleve.ahriz.nada@ecolealjabr.com</p>
+        <p>eleve.radi.taha@ecolealjabr.com</p>
+      </div>
+      <p>© 2023 par Alvis</p>
+    </div>
+  </body>
+</html>
